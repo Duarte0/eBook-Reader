@@ -1,3 +1,4 @@
+import 'package:ebook_reader/pages/books_page.dart';
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -39,7 +40,8 @@ class WelcomePage extends StatelessWidget {
               padding: EdgeInsets.only(bottom: 100)), 
             ElevatedButton(
               onPressed: () {
-                // Adicione a lógica desejada quando o botão for pressionado
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (BuildContext context) => const BooksPage()));
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF85582C),
